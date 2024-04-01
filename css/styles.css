@@ -1,0 +1,1624 @@
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Rozha+One&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primer-color: #F0EAD2;
+    --segundo-color: #6C584C;
+    --tercer-color: #ADC178;
+    --cuarto-color:#DDE5B6;
+    --quinto-color: #A98467;
+    --font-titulos: 60px;
+    --font-subtitulos: 32px;
+    --fuente-titulos: "Rozha One", serif;
+    --fuente-primaria: "Josefin Slab", serif;
+    --fuente-secundaria: "Unna", serif;
+
+}
+
+/* Items del menú centrado */
+
+.header-porta{
+    background: var(--primer-color) !important;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    z-index: 999;
+}
+
+.navbar-brand img{
+    height: 35px;
+    width: 150px;
+    
+}
+
+nav .navbar-collapse{
+    justify-content: center;
+    font-family: var(--fuente-secundaria);
+    font-size: 18px;
+    
+}
+
+nav .navbar-collapse .nav-link{
+    padding: 10px 30px;
+    margin: 0 25px;
+    border-bottom: 1px solid transparent;
+    position: relative;
+}
+nav .navbar-collapse .nav-link:hover{
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background: var(--cuarto-color);
+}
+
+/* Items para perfil profesional   */
+
+
+#pantalla-dividida{
+    display: flex;
+    background: var(--primer-color);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.izq{
+    position: absolute;
+    height: 875px;
+    width: 48%;
+    left: 0;
+    top: 90px;
+    z-index: 2;
+    background: var(--segundo-color);
+    background-size: cover;
+}
+
+.der{
+    position: absolute;
+    height: 875px;
+    width: 49%;
+    right: 0;
+    top: 90px;
+    justify-content: justify;
+    background: var(--tercer-color);
+    
+}
+
+@keyframes slidein-left {
+    from {
+        left: -50%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slidein-right {
+    from {
+        right: -50%;
+    }
+    to {
+        right: 0;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+#pantalla-dividida .der h1{
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    padding-top: 300px;
+
+}
+
+#pantalla-dividida .der p.saludo{
+    padding-top: 100px;
+
+}
+
+#pantalla-dividida .der p{
+    text-align: center;
+    font-family: var(--fuente-secundaria);
+    font-size: 25px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 20px;
+}
+
+#perfil-profe{
+    width: 100%;
+    position: relative;
+    padding-bottom: 120px;
+    background: #fff;
+    
+}
+
+#perfil-profe .foto{
+    position: absolute;
+    height: 872px;
+    width: 880px;
+    border-radius: 483px 483px 0 0;
+    background: url(../img/yo.jpg)/*var(--cuarto-color)*/;
+    background-size: cover;
+    top: -800px;
+    left: 200px;
+    z-index: 3;
+    
+}
+
+.foto{
+    background-size: cover;
+    /* animation: fadein 2s forwards; */
+
+}
+
+
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+.columna-2 img {
+    width: 500px;
+    height: 700px;
+    margin-left: 180px;
+    /* opacity: 0; */
+    /* transition: opacity 1s, transform 1s; */
+    /* transform: translateX(100%); */
+}
+
+.columna-2 img.show {
+    opacity: 1;
+    /* transform: translateX(0%); */
+}
+
+
+
+#perfil-profe {
+    display: flex;
+    padding-top: 250px;
+    justify-content: space-around;
+}
+
+
+.columna-1 h1{
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    margin-top: 50px;
+    margin-bottom: 140px;
+    margin-right: 40px;
+}
+
+.columna-1 p{
+    text-align: center;
+    font-family: var(--fuente-primaria);
+    font-size: 20px;
+    margin-right: 45px;
+}
+
+/* Estilos para habilidades*/
+
+#habilidades{
+    position: relative;
+    height: 100vh;
+    background: var(--primer-color);
+    padding: 100px;
+}
+
+#habilidades h1{
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 60px;
+    padding-bottom: 20px;
+}
+
+#habilidades p{
+    text-align: center;
+    font-family: var(--fuente-primaria);
+    font-size: 30px;
+    
+}
+#habilidades h3{
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+#habilidades .texto-habilidad{
+    position: absolute;
+    height: 350px;
+    width: 450px;
+    background: var(--cuarto-color);
+    padding: 65px 35px ;
+    left: 420px;
+    top: 110px;
+}
+
+#habilidades .texto-habilidad p{
+    font-size: 18px;
+}
+
+#carouselExampleSlidesOnly{
+    padding: 65px;
+}
+
+.carousel-inner img{ 
+    height: 550px;
+    width: 600px;
+    margin-left: 600px;
+}  
+
+
+/* Estilos para proyectos */
+
+#portafolio{
+    height: 100vh;
+    padding: 80px;
+}
+
+#portafolio h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--fuente-titulos);
+    padding-bottom: 20px;
+}
+
+#portafolio p{
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--fuente-primaria);
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+
+#portafolio .cont-proyectos{
+    position: relative;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* estilos para proyecto del lado izquierdo */
+
+.cols1 img{
+    position: absolute;
+    height: 300px;
+    left: 170px;
+    transition: .4s;
+}
+
+.cols1 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols1 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size: 35px;
+    left: 258px;
+    padding-top: 100px;
+    z-index: 3;
+}
+
+#portafolio .cols1 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    left: 258px;
+    top: 210px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* estilos para proyecto de la mitad */
+
+.cols2 img{
+    position: absolute;
+    height: 300px;
+    left: 510px;
+    transition: .4s;
+}
+
+.cols2 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols2 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size: 35px;
+    left: 562px;
+    padding-top: 100px;
+    z-index: 3;
+}
+
+#portafolio .cols2 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    left: 600px;
+    top: 210px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* estilos para proyecto del lado derecho*/
+
+.cols3 img{
+    position: absolute;
+    height: 300px;
+    left: 850px;
+    transition: .4s;
+}
+
+.cols3 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols3 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    left: 910px;
+    padding-top: 70px;
+    z-index: 3;
+}
+
+#portafolio .cols3 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    left: 935px;
+    top: 210px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* Otros proyectos */
+/* Lado derecho */
+
+.cols4 img{
+    position: absolute;
+    height: 300px;
+    left: 338px;
+    top: 218px;
+    transition: .4s;
+}
+
+.cols4 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols4 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size: 35px;
+    left: 416px;
+    top: 218px;
+    padding-top: 100px;
+    z-index: 3;
+}
+
+#portafolio .cols4 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    left: 428px;
+    top: 398px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* Lado izquierdo */
+
+.cols5 img{
+    position: absolute;
+    height: 300px;
+    right: 332px;
+    top: 218px;
+    transition: .4s;
+}
+
+.cols5 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols5 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size: 35px;
+    right: 385px;
+    top: 220px;
+    padding-top: 100px;
+    z-index: 3;
+}
+
+#portafolio .cols5 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    right: 418px;
+    top: 398px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* Estilos para hobbies */
+
+/* Estilo para imagen lado derecho y texto lado izquierdo */
+
+#hobbies{
+    height: 100vh;
+    background: var(--primer-color);
+    padding: 80px;
+    position: relative;
+}
+
+#hobbies h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--fuente-titulos);
+    padding-bottom: 20px;
+}
+
+#hobbies p{
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--fuente-primaria);
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+#hobbies .cont-hobbie{
+    position: relative;
+}
+
+#hobbies .colu-1 h3{
+    position: absolute;
+    left: 250px;
+    top: 95px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies .colu-1 p{
+    position: absolute;
+    margin-left: -340px;
+    margin-right: 340px;
+    top: 180px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+#hobbies .img1{
+    position: absolute;
+    right: -291px;
+    top: 90px;
+    border-radius: 200px 0 0 200px ;
+    height: 345px;
+}
+
+/* Estilo para imagen lado izquierdo y texto lado derecho */
+
+#hobbies .img2{
+    position: absolute;
+    left: -292px;
+    top: 565px;
+    border-radius: 0 200px 200px 0;
+    height: 345px;
+    width: 720px;
+}
+
+#hobbies .colu-3 h3{
+    position: absolute;
+    right: 410px;
+    top: 900px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies .colu-3 p{
+    position: absolute;
+    padding-left: 780px;
+    padding-right: 280px;
+    top: 1010px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+/* Seccion con otros hobbies */
+
+#hobbies2{
+    height: 100vh;
+    position: relative;
+}
+
+
+#hobbies2  h3{
+    position: absolute;
+    left: 448px;
+    top: 480px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies2  p{
+    text-align: center;
+    position: absolute;
+    padding-left: 45px;
+    padding-right: 54%;
+    top: 565px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+#hobbies2 .img1{
+    position: absolute;
+    right: 0;
+    top: 450px;
+    border-radius: 200px 0 0 200px ;
+    height: 348px;
+    width: 682px;
+}
+
+/* Otro hobbie */
+
+/* Estilo para imagen lado izquierdo y texto lado derecho */
+
+#hobbies2 .img2{
+    position: absolute;
+    left: 0;
+    top: 900px;
+    border-radius: 0 200px 200px 0;
+    height: 346px;
+    width: 695px;
+    z-index: 9;
+}
+
+#hobbies2 .colu-3 h3{
+    position: absolute;
+    left: 1235px;
+    top: 936px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+    z-index: 9;
+}
+
+#hobbies2 .colu-3 p{
+    position: absolute;
+    padding-left: 240px;
+    padding-right: 435px;
+    top: 1010px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+    z-index: 9;
+}
+
+/* Estilo para imagen lado derecho y texto lado izquierdo*/
+
+#hobbies3{
+    height: 100vh;
+    background: var(--primer-color);
+    padding: 80px;
+    position: relative;
+}
+
+#hobbies3  h3{
+    position: absolute;
+    left: 448px;
+    top: 480px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies3  p{
+    text-align: center;
+    position: absolute;
+    padding-left: 75px;
+    padding-right: 58%;
+    top: 565px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+#hobbies3 .img1{
+    position: absolute;
+    right: 0;
+    top: 450px;
+    border-radius: 200px 0 0 200px ;
+    height: 348px;
+    width: 682px;
+}
+
+/* Estilos para seccion de estudios */
+
+#estudios{
+    height: 100vh;
+    padding: 80px;
+    position: relative;
+}
+
+#estudios h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--fuente-titulos);
+    padding-bottom: 20px;
+}
+
+#estudios p{
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--fuente-secundaria);
+    padding-left: 30%;
+    padding-right: 30%;
+    padding-bottom: 100px;
+}
+
+#estudios .cont-estudio{
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+#estudios .columna1{
+    width: 400px;
+    height: 300px;
+    background: var(--quinto-color);
+}
+
+#estudios .columna1 p{
+    font-family: var(--fuente-secundaria);
+    color: white;
+    font-size: 20px;
+    padding-top: 115px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#estudios .circulo1{
+    position: absolute;
+    background: var(--tercer-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 476px;
+    margin-top: -50px;
+    z-index: 9;
+}
+
+#estudios .circulo1 img{
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    left: 18px;
+    margin-top: 15px;
+    z-index: 9;
+}
+
+#estudios .columna2{
+    width: 400px;
+    height: 300px;
+    background: var(--quinto-color);
+}
+
+#estudios .columna2 p{
+    font-family: var(--fuente-secundaria);
+    color: white;
+    font-size: 20px;
+    padding-top: 115px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#estudios .circulo2{
+    position: absolute;
+    background: var(--tercer-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    z-index: 9;
+}
+
+#estudios .circulo2 img{
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    left: 18px;
+    margin-top: 15px;
+    z-index: 9;
+}
+
+#estudios .columna3{
+    width: 400px;
+    height: 300px;
+    background: var(--quinto-color);
+}
+
+#estudios .columna3 p{
+    font-family: var(--fuente-secundaria);
+    color: white;
+    font-size: 20px;
+    padding-top: 115px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#estudios .circulo3{
+    position: absolute;
+    background: var(--tercer-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    right: 466px;
+    margin-top: -50px;
+    z-index: 9;
+}
+
+#estudios .circulo3 img{
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    right: 18px;
+    margin-top: 15px;
+    z-index: 9;
+}
+
+/* Estilos para footer (redes) */
+
+#redes{
+    height: 50vh;
+    background: var(--segundo-color);
+}
+
+#redes h1{
+    padding: 50px;
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 60px;
+    color: #fff;
+}
+#redes .cont-redes{
+    justify-content: space-between;
+    text-align: center;
+    padding: 0 300px;
+}
+
+#redes .red1 img{
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+#redes .red1 h4{
+    text-align: center;
+    color: #fff;
+    font-family: var(--fuente-secundaria);
+}
+
+
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+    /* Estilos para dispositivos móviles */
+  
+    /* Estilos del menú */
+    .navbar-brand img {
+      height: 25px;
+      width: 100px;
+    }
+  
+    nav .navbar-collapse {
+      font-size: 16px;
+    }
+  
+    nav .navbar-collapse .nav-link {
+      padding: 10px 20px;
+      margin: 0 15px;
+    }
+
+    
+  
+    /* Estilos del lado izquierdo y derecho del perfil */
+    #pantalla-dividida{
+        display: flex;
+        background: var(--primer-color);
+        height: 50vh;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .izq{
+        position: absolute;
+        height: 875px;
+        width: 47%;
+        left: 0;
+        top: 90px;
+        z-index: 2;
+        
+    }
+    
+    .der{
+        position: absolute;
+        height: 875px;
+        width: 48%;
+        right: 0;
+        top: 90px;
+        justify-content: justify;
+    }
+
+  
+    #pantalla-dividida .der h1 {
+      padding-top: 25px;
+      text-align: center;
+      font-size: 20px;
+    }
+  
+    #pantalla-dividida .der p.saludo {
+      padding-top: 10px;
+      margin-left: 30px;
+      margin-right: 20px;
+      text-align: center;
+      font-size: 15px;
+    }
+  
+    #pantalla-dividida .der p {
+      margin-left: 30px;
+      margin-right: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    #perfil-profe{
+        padding-top: 100px;
+        
+    }
+
+    #perfil-profe img{
+        padding-top: 25px;
+    }
+  
+    #perfil-profe .foto {
+      position: absolute;
+      height: 300px;
+      width: 250px;
+      top: -250px;
+      left: 10px;
+      border-radius: 483px 483px 0 0;
+    }
+
+    #perfil-profe{
+        padding-bottom: 50px;
+    }
+  
+    .columna-2 img {
+      width: 84%;
+      height: auto;
+      margin: 30px;
+    }
+  
+    .columna-1 h1 {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      margin-right: 0;
+      text-align: center;
+    }
+  
+    .columna-1 p {
+      margin-right: 0;
+    }
+  
+    /* Otros ajustes de diseño para dispositivos móviles */
+    #habilidades {
+      padding: 10px 20px;
+    }
+
+    #habilidades h3{
+        font-size: 22px;
+    }
+
+    #habilidades{
+        position: relative;
+        height: 90vh;
+        background: var(--primer-color);
+        /* padding: 100px; */
+    }
+  
+    #habilidades .texto-habilidad {
+      width: 78%;
+      height: 50%;
+      left: 0px;
+      top: 120px;
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    #habilidades .texto-habilidad p{
+        font-size: 15px;
+    }
+    #carouselExampleSlidesOnly {
+      padding: 15px;
+    }
+  
+    .carousel-inner img {
+        width: 100%;
+        margin-left: 0;
+    }
+  
+    #portafolio h1 {
+      padding-bottom: 10px;
+    }
+  
+    #portafolio p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  
+    .cols1 img, .cols2 img, .cols3 img, .cols4 img, .cols5 img {
+      width: 70%;
+      left: 20%;
+    }
+  
+    #portafolio .cols1 h3, #portafolio .cols2 h3, #portafolio .cols3 h3,
+    #portafolio .cols4 h3, #portafolio .cols5 h3 {
+      left: 10%;
+    }
+  
+    #portafolio .cols1 a, #portafolio .cols2 a, #portafolio .cols3 a,
+    #portafolio .cols4 a, #portafolio .cols5 a {
+      left: 10%;
+    }
+  
+    /* Ajustes para la sección de hobbies */
+    #hobbies p, #hobbies2 p, #hobbies3 p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+  
+    /* Ajustes para la sección de estudios */
+    #estudios p {
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+
+    #portafolio{
+        height: auto;
+        padding: 0;
+    }
+.cols1 img{
+    position: relative;
+    width: 284px;
+    height: 300px;
+    left: 30px;
+    transition: .4s;
+}
+
+.cols1 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols1 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size: 35px;
+    left: 158px;
+    padding-top: 100px;
+    z-index: 3;
+}
+
+#portafolio .cols1 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    left: 160px;
+    top: 180px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* estilos para proyecto de la mitad */
+
+.cols2 img{
+    position: relative;
+    width: 284px;
+    height: 300px;
+    left: 30px;
+    top: 40px;
+    transition: .4s;
+}
+
+.cols2 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols2 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size: 35px;
+    left: 125px;
+    padding-top: 145px;
+    z-index: 3;
+}
+
+#portafolio .cols2 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    left: 160px;
+    top: 540px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* estilos para proyecto del lado derecho*/
+
+.cols3 img{
+    position: relative;
+    width: 284px;
+    height: 300px;
+    left: 30px;
+    top: 80px;
+    transition: .4s;
+}
+
+.cols3 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols3 h3{
+    
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    text-align: center;
+    color: #fff;
+    font-size: 35px;
+    top: 700px;
+    left: 130px;
+    padding-top: -100px;
+    z-index: 3;
+}
+
+#portafolio .cols3 a{
+    position: relative;
+    height: 50px;
+    width: 110px;
+    left: 115px;
+    top: -50px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* Otros proyectos */
+/* Lado derecho */
+
+.cols4 img{
+    position: relative;
+    width: 284px;
+    height: 300px;
+    left: 30px;
+    top: 30px;
+    transition: .4s;
+}
+
+.cols4 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols4 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #ffffff;
+    font-size: 35px;
+    left: 146px;
+    top: 50px;
+    padding-top: 100px;
+    z-index: 3;
+}
+
+#portafolio .cols4 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    left: 158px;
+    top: 198px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+/* Lado izquierdo */
+
+.cols5 img{
+    position: relative;
+    width: 280px;
+    height: 300px;
+    right: 332px;
+    left: 30px;
+    top: 80px;
+    margin-bottom: 100px;
+    transition: .4s;
+}
+
+.cols5 img:hover{
+    transform: scale(1.1);
+}
+
+#portafolio .cols5 h3{
+    position: absolute;
+    font-family: var(--fuente-titulos);
+    color: #fff;
+    font-size: 35px;
+    right: 385px;
+    top: 390px;
+    left: 120px;
+    padding-top: 100px;
+    z-index: 3;
+}
+
+#portafolio .cols5 a{
+    position: absolute;
+    height: 50px;
+    width: 110px;
+    right: 418px;
+    top: 548px;
+    left: 150px;
+    font-size: 23px;
+    font-family: var(--fuente-titulos);
+    background: var(--cuarto-color);
+    border: none;
+    border-radius: 15%;
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 8px 10px;
+}
+
+#hobbies{
+    height: 100vh;
+    background: var(--primer-color);
+    padding: 0px;
+    position: relative;
+}
+
+#hobbies h1{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--fuente-titulos);
+    padding-bottom: 20px;
+}
+
+#hobbies p{
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--fuente-primaria);
+}
+
+#hobbies .cont-hobbie{
+    position: relative;
+}
+
+#hobbies .colu-1 h3{
+    position: relative;
+    left: 30px;
+    top: 0px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies .colu-1 p{
+    position: absolute;
+    margin-left: 0px;
+    margin-right: 0px;
+    top: 280px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+#hobbies .img1{
+    position: absolute;
+    right: 0px;
+    left: 70px;
+    top: 50px;
+    border-radius: 200px ;
+    width: 300px;
+    height: 205px;
+}
+
+/* Estilo para imagen lado izquierdo y texto lado derecho */
+
+#hobbies .img2{
+    position: absolute;
+    left: 70px;
+    top: 570px;
+    border-radius: 200px;
+    height: 205px;
+    width: 300px;
+}
+
+#hobbies .colu-3 h3{
+    position: relative;
+    right: 0px;
+    left: 30px;
+    top: 500px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies .colu-3 p{
+    position: absolute;
+    padding-left: 7px;
+    padding-right: 20px;
+    top: 1250px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+/* Seccion con otros hobbies */
+
+#hobbies2{
+    height: 110vh;
+    position: relative;
+}
+
+
+#hobbies2  h3{
+    position: relative;
+    left: 30px;
+    top: 520px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies2  p{
+    text-align: center;
+    position: absolute;
+    padding-left: 0px;
+    padding-right: 0%;
+    top: 800px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+#hobbies2 .img1{
+    position: absolute;
+    right: 0;
+    left: 70px;
+    top: 580px;
+    border-radius: 200px;
+    height: 205px;
+    width: 300px;
+}
+
+/* Otro hobbie */
+
+/* Estilo para imagen lado izquierdo y texto lado derecho */
+
+#hobbies2 .img2{
+    position: absolute;
+    left: 70px;
+    top: 1120px;
+    border-radius:200px;
+    height: 205px;
+    width: 300px;
+    z-index: 9;
+}
+
+#hobbies2 .colu-3 h3{
+    position: relative;
+    left: 30px;
+    top: 1000px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+    z-index: 9;
+}
+
+#hobbies2 .colu-3 p{
+    position: absolute;
+    padding-left: 0px;
+    padding-right: 0px;
+    top: 1350px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+    z-index: 9;
+}
+
+/* Estilo para imagen lado derecho y texto lado izquierdo*/
+
+#hobbies3{
+    height: 110vh;
+    background: var(--primer-color);
+    padding: 80px;
+    position: relative;
+}
+
+#hobbies3  h3{
+    position: absolute;
+    left: 40px;
+    top: 480px;
+    font-size: 35px;
+    font-family: var(--fuente-titulos);
+}
+
+#hobbies3  p{
+    text-align: center;
+    position: absolute;
+    padding-left: 0px;
+    padding-right: 0%;
+    left: 30px;
+    top: 765px;
+    font-size: 25px;
+    font-family: var(--fuente-primaria);
+}
+
+#hobbies3 .img1{
+    position: absolute;
+    right: 0;
+    left: 70px;
+    top: 550px;
+    border-radius: 200px ;
+    height: 205px;
+    width: 300px;
+}
+
+
+#estudios{
+    height: 160vh;
+    padding: 80px;
+    position: relative;
+}
+
+#estudios h1{
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--fuente-titulos);
+    padding-bottom: 20px;
+}
+
+#estudios p{
+    text-align: center;
+    font-size: 30px;
+    font-family: var(--fuente-secundaria);
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 100px;
+}
+
+#estudios .cont-estudio{
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+#estudios .columna1{
+    width: 400px;
+    height: 300px;
+    background: var(--quinto-color);
+}
+
+#estudios .columna1 p{
+    font-family: var(--fuente-secundaria);
+    color: var(--primer-color);
+    font-size: 25px;
+    padding-top: 115px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#estudios .circulo1{
+    display: none;
+    position: absolute;
+    background: var(--tercer-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    left: 476px;
+    margin-top: -50px;
+    z-index: 9;
+}
+
+#estudios .circulo1 img{
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    left: 18px;
+    margin-top: 15px;
+    z-index: 9;
+}
+
+#estudios .columna2{
+    width: 400px;
+    height: 300px;
+    background: var(--quinto-color);
+}
+
+#estudios .columna2 p{
+    font-family: var(--fuente-secundaria);
+    color: var(--primer-color);
+    font-size: 25px;
+    padding-top: 115px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#estudios .circulo2{
+
+    position: absolute;
+    background: var(--tercer-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin-top: -50px;
+    z-index: 9;
+}
+
+#estudios .circulo2 img{
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    left: 18px;
+    margin-top: 15px;
+    z-index: 9;
+}
+
+#estudios .columna3{
+    width: 400px;
+    height: 300px;
+    background: var(--quinto-color);
+}
+
+#estudios .columna3 p{
+    font-family: var(--fuente-secundaria);
+    color: var(--primer-color);
+    font-size: 25px;
+    padding-top: 115px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#estudios .circulo3{
+    display: none;
+    position: absolute;
+    background: var(--tercer-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    right: 466px;
+    margin-top: -50px;
+    z-index: 9;
+}
+
+#estudios .circulo3 img{
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    right: 18px;
+    margin-top: 15px;
+    z-index: 9;
+}
+
+#redes{
+    height: 50vh;
+    background: var(--segundo-color);
+}
+
+#redes h1{
+    padding: 50px;
+    text-align: none;
+    font-family: var(--fuente-titulos);
+    font-size: 60px;
+    color: #fff;
+}
+#redes .cont-redes{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: none;
+    padding: 0px 0px;
+}
+
+#redes .red1 {
+    width: 0;
+    padding-right: 50px;
+}
+
+#redes .red1 img{
+    height: 100px;
+    padding-bottom: 20px;
+}
+
+#redes .red1 h4{
+    text-align: center;
+    color: #fff;
+    font-family: var(--fuente-secundaria);
+}
+
+  }
+  
